@@ -2,13 +2,13 @@
 
 <p align="center">
   <a href="#">
-    <img src="https://img.shields.io/badge/Aula-Python-brightgreen.svg" alt="Aula Python">
+    <img src="https://img.shields.io/badge/Aula-Portal_Biblioteca-brightgreen.svg" alt="Aula Portal Biblioteca">
   </a>
   <a href="#">
     <img src="https://img.shields.io/badge/Aula-Django-blue.svg" alt="Aula Django">
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/Aula-Portal_Biblioteca-orange.svg" alt="Aula Portal Biblioteca">
+    <img src="https://img.shields.io/badge/Aula-Backend-orange.svg" alt="Aula Backend">
   </a>
 </p>
 
@@ -19,70 +19,69 @@
 * [Fundamentos Teóricos](#fundamentos-teóricos)
 * [Objetivo da Aula](#objetivo-da-aula)
 * [Desenvolvimento do Projeto](#desenvolvimento-do-projeto)
-* [Próximas Etapas](#próximas-etapas)
 * [Créditos e Referências](#créditos-e-referências)
 
 ## Introdução
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-Aula Django 04. Projeto utilizando o Django para ser desenvolvido na Aula de GAC116 - Programação Web. Essa aula é uma continuação da Aula Django 03.
+O objetivo deste tutorial é criar um sistema para gestão de biblioteca usando o framework Python Django. Esse projeto será utilizado na disciplina GAC116 - Programação Web da Universidade Federal de Lavras (UFLA). Esta aula é uma continuação da Aula Django 03.
 
-O objetivo desse projeto é criar um sistema para gestão de biblioteca.
+Este tutorial foi elaborado com base no tutorial disponível no [curso de Django da W3Schools](https://www.w3schools.com/django/index.php) e na [documentação oficial do Django](https://docs.djangoproject.com/pt-br/5.0/).
 
-Este tutorial foi elaborado baseado no tutorial disponível no [curso de django da w3schools](https://www.w3schools.com/django/index.php) e também baseado na [documentação oficial do django](https://docs.djangoproject.com/pt-br/5.0/).
-
-A aula está estruturada em forma de tutorial, de forma que cada estudante vá replicando em seu computador os conceitos e recursos aqui mostrados. A aula mostra a evolução do código/solução para que os estudantes possa compreender como as diferentes tecnologias se conectam.
+A aula está organizada no formato de tutorial, permitindo que cada estudante replique em seu computador os conceitos e recursos apresentados. O código será desenvolvido gradualmente, de modo a evidenciar a evolução da solução e facilitar a compreensão de como as tecnologias Django, HTML, CSS e JavaScript se integram na construção de aplicações web.
 
 ## Recursos Utilizados
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-A seguir estão listados os principais recursos utilizados no desenvolvimento desta aula.
+A seguir estão listados os principais recursos empregados no desenvolvimento desta aula.
 
 ### Linguagens
 
-* Python - Linguagem de Programação Principal
-    * [link do site python](https://www.python.org/)
-    * [link do curso da w3schools](https://www.w3schools.com/python/default.asp)
-* HTML - Estrutura da Página Web
-    * [link do curso da w3schools](https://www.w3schools.com/html/default.asp)
-* CSS - Apresentação da Página Web
-    * [link do curso da w3schools](https://www.w3schools.com/css/default.asp)
-* JavaScript - Comportamento da Página Web
-    * [link do curso da w3schools](https://www.w3schools.com/js/default.asp)
-* SQL - Linguagem para Consultas no Banco de Dados
-  * [link do curso da w3schools](https://www.w3schools.com/sql/default.asp)
+* Python - Linguagem de programação principal
+  * [Link do site Python](https://www.python.org/)
+  * [Link do curso da W3Schools](https://www.w3schools.com/python/default.asp)
+* HTML - Responsável pela estrutura da página web
+  * [Link do curso da W3Schools](https://www.w3schools.com/html/default.asp)
+* CSS - Responsável pela apresentação da página web
+  * [Link do curso da W3Schools](https://www.w3schools.com/css/default.asp)
+* JavaScript - Responsável pelo comportamento da página web
+  * [Link do curso da W3Schools](https://www.w3schools.com/js/default.asp)
+* SQL - Linguagem para consultas no banco de dados
+  * [Link do curso da W3Schools](https://www.w3schools.com/sql/default.asp)
 
-### Framework
+### Frameworks
 
-* Django - Framework Web
-    * [link do site do django](https://www.djangoproject.com/)
-    * [link do curso da w3schools](https://www.w3schools.com/django/index.php)
+* Django - Framework web
+  * [Link do site do Django](https://www.djangoproject.com/)
+  * [Link do curso da W3Schools](https://www.w3schools.com/django/index.php)
 * Bootstrap - Framework CSS
-    * [link do site do bootstrap](https://getbootstrap.com/)
-    * [link do curso da w3schools](https://www.w3schools.com/bootstrap5/index.php)
+  * [Link do site do Bootstrap](https://getbootstrap.com/)
+  * [Link do curso da W3Schools](https://www.w3schools.com/bootstrap5/index.php)
 
 ### Bibliotecas
 
-* Jinja - Biblioteca Python para Templates
-    * [link do site do jinja](https://jinja.palletsprojects.com/en/3.1.x/)
-* Chart.js - Biblioteca JavaScript para Gráficos
-    * [link do site do chart.js](https://www.chartjs.org/)
-* FontAwesome - Biblioteca CSS para Ícones
-     * [link do site do fontawesome](https://fontawesome.com/)
-* WhiteNoise - Biblioteca Python para Servir Arquivos Estáticos
-    * [link do site do whitenoise](https://whitenoise.readthedocs.io/)
+* Jinja - Biblioteca Python para templates
+  * [Link do site do Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
+* Chart.js - Biblioteca JavaScript para gráficos
+  * [Link do site do chart.js](https://www.chartjs.org/)
+* FontAwesome - Biblioteca CSS para ícones
+  * [Link do site do Fontawesome](https://fontawesome.com/)
+  * [Link da documentação Fontawesome](https://docs.fontawesome.com/web/setup/get-started) 
+  * [Link do curso da W3Schools](https://www.w3schools.com/icons/fontawesome5_intro.asp).
+* WhiteNoise - Biblioteca Python para servir arquivos estáticos
+  * [Link do site do Whitenoise](https://whitenoise.readthedocs.io/)
 * Unfold - Biblioteca Python para Interface Administrativa do Django
     * [link do django-unfold](https://unfoldadmin.com/)
 
 ### Ferramentas
 
-* Git - Sistema de Controle de Versão - [link](https://git-scm.com/)
-* Github - Plataforma de Hospedagem de Códigos - [link](https://github.com/)
-* Visual Studio Code - IDE - [link](https://code.visualstudio.com/)
-* Pip - Gerenciador de Pacotes do Python - [link](https://pypi.org/project/pip/)
-* Venv - Ambiente Virtual do Python - [link](https://docs.python.org/pt-br/3/library/venv.html)
+* Visual Studio Code - Ambiente de desenvolvimento integrado - [link](https://code.visualstudio.com/)
+* Git - Sistema de controle de versão - [link](https://git-scm.com/)
+* Github - Plataforma de hospedagem e colaboração em projetos de software - [link](https://github.com/)
+* Pip - Gerenciador de pacotes do Python - [link](https://pypi.org/project/pip/)
+* Venv - Ambiente virtual do Python - [link](https://docs.python.org/pt-br/3/library/venv.html)
 * SQLite Online - SGBD - [link](https://sqliteonline.com/)
 * DB Browser for SQLite - SGBD - [link](https://sqlitebrowser.org/)
 
@@ -90,19 +89,19 @@ A seguir estão listados os principais recursos utilizados no desenvolvimento de
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-A seguir estão destacados alguns dos principais fundamentos teóricos para entendimento desse tutorial.
+A seguir estão destacados alguns dos principais fundamentos teóricos para entendimento deste tutorial.
 
 ### Características do Django
 
-**1. Framework completo:** Django oferece tudo o que é necessário para o desenvolvimento de uma aplicação web, incluindo roteamento de URLs, mapeamento objeto-relacional (ORM), sistema de templates, autenticação, etc.
+**1. Framework completo:** Django oferece tudo o que é necessário para o desenvolvimento de uma aplicação web, incluindo roteamento de URLs, Mapeamento Objeto-Relacional (ORM), sistema de templates, autenticação, etc.
 
 **2. Administração automática:** Com base nos modelos definidos, Django gera automaticamente uma interface administrativa poderosa e personalizável, economizando tempo no desenvolvimento de funcionalidades administrativas.
 
-**3. ORM (Object-Relational Mapping):** O Django possui um ORM que facilita a interação com bancos de dados relacionais, permitindo que os desenvolvedores escrevam consultas em Python ao invés de SQL.
+**3. ORM (*Object-Relational Mapping*):** O Django possui um ORM que facilita a interação com bancos de dados relacionais, permitindo que os desenvolvedores escrevam consultas em Python ao invés de SQL.
 
 **4. Sistema de templates:** Django possui um sistema de templates eficiente que permite criar HTML dinâmico de forma organizada, utilizando lógica básica como laços e condicionais.
 
-**5. Segurança embutida:** O Django se preocupa com a segurança, oferecendo proteção contra ataques comuns como SQL Injection, Cross-site Scripting (XSS), Cross-site Request Forgery (CSRF), e Clickjacking.
+**5. Segurança embutida:** O Django se preocupa com a segurança, oferecendo proteção contra ataques comuns como SQL *Injection*, *Cross-site Scripting* (XSS), *Cross-site Request Forgery* (CSRF), e *Clickjacking*.
 
 **6. Escalabilidade:** Django é altamente escalável, podendo lidar com grandes volumes de tráfego, como em sites populares que utilizam o framework (por exemplo, Instagram e Pinterest).
 
@@ -150,7 +149,7 @@ Essa separação facilita a manutenção e escalabilidade da aplicação, permit
 
 ### Arquitetura MVT do Django
 
-O modelo MVT (Model-View-Template) é uma arquitetura usada no framework Django para desenvolvimento de aplicações web. Ele organiza a aplicação em três componentes principais:
+O modelo MVT (*Model-View-Template*) é uma arquitetura usada no framework Django para desenvolvimento de aplicações web. Ele organiza a aplicação em três componentes principais:
 
 * **Model (Modelo)**: Responsável pela definição da estrutura dos dados e a interação com o banco de dados. Ele define as classes que representam as tabelas e seus relacionamentos, além de métodos para realizar consultas e operações nos dados.
 
@@ -186,11 +185,21 @@ A figura abaixo detalha ainda mais a arquitetura MVT e as tecnologias envolvidas
 
 ### Modelo ORM
 
-O Django suporta o conceito de Mapeamento Objeto-Relacional (ORM). Através do ORM você define a modelagem de dados através de classes em Python. Com isso é possível gerar suas tabelas no banco de dados e manipulá-las sem necessidade de utilizar SQL (o que também é possível). Os registros de cada tabela são representados como instâncias das classes correspondentes.
+O Django suporta o conceito de Mapeamento Objeto-Relacional (ORM). Através do ORM você define a modelagem de dados através de classes em Python. Com isso é possível gerar suas tabelas no banco de dados e manipulá-las sem necessidade de utilizar SQL (o que também é possível). Os registros de cada tabela são representados como instâncias das classes correspondentes. O ORM mapeia os objetos da aplicação para as tabelas do banco de dados, e vice-versa, facilitando o trabalho com dados de banco de dados em um ambiente de programação orientado a objetos.
+
+Em um framework como Django, o ORM é uma parte fundamental. Ele permite que os desenvolvedores definam modelos de dados (classes Python) que representam as tabelas do banco de dados. Esses modelos incluem campos que representam as colunas do banco de dados e métodos que definem o comportamento dos objetos. O ORM traduz as operações realizadas nos objetos (como salvar, atualizar, excluir) em instruções SQL apropriadas para interagir com o banco de dados.
+
+Usando o ORM, os desenvolvedores podem escrever código mais legível, portátil e seguro, pois não precisam lidar diretamente com SQL. Além disso, o ORM facilita a migração entre diferentes sistemas de gerenciamento de banco de dados (como PostgreSQL, MySQL, SQLite) sem a necessidade de alterações significativas no código da aplicação.
+
+![Modelo ORM do Django](./docs/orm.png)
+
+Fonte: [https://medium.com/@mochammadagusyahya](https://medium.com/@mochammadagusyahya/mastering-data-magic-unleashing-the-power-of-django-orm-in-your-web-development-journey-62fa851bf49a)
 
 ## Objetivo da Aula
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
+
+O objetivo desta aula é dar continuidade à construção do projeto Portal da Biblioteca utilizando o framework Python Django. Aprenderemos a criar um novo aplicativo para a gestão de usuários cadastrados no sistema. Definiremos as telas de login e cadastro, além da função de logout. Também veremos como disponibilizar conteúdo apenas para usuários autenticados e como criar testes unitários para garantir o funcionamento do sistema. Por fim, abordaremos algumas configurações adicionais do Django, como a adição de novos temas no ambiente administrativo, a implementação de filtros e buscas, bem como a definição do fuso horário do projeto.
 
 A animação abaixo mostra de forma visual o resultado esperado nesta aula.
 
@@ -200,73 +209,52 @@ A animação abaixo mostra de forma visual o resultado esperado nesta aula.
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-Os passos a seguir devem ser seguidos para alcançar o objetivo da aula.
+Siga os passos abaixo para alcançar o objetivo da aula.
 
-### Clonando o Repositório
+### Clonar o Repositório
 
-Inicialmente, clone o repositório da seguinte forma:
+Para iniciar, faça o clone do repositório com o seguinte comando:
 
 ```bash
 git clone https://github.com/ufla-prog-web/aula-django-04.git
 ```
 
-### Baixando o Repositório
+### Abrir o Visual Studio Code
 
-Caso deseje ao invês de clonar o repositório (método acima), baixe o repositório do [link](https://github.com/ufla-prog-web/aula-django-04) clicando em `Code` e `Download ZIP`.
+Abra o Visual Studio Code (VS Code) na pasta `aula-django-04`.
 
-### Abrindo o Visual Studio Code
+**Dica:** abra o arquivo `README.md` e selecione a opção `Open Preview to the Side` para visualizar o tutorial lado a lado enquanto desenvolve a aplicação.
 
-Abra a IDE Visual Studio Code na pasta `aula-django-04`.
+**Dica:** abra um terminal utilizando a IDE clicando em `Terminal` e `New Terminal`.
 
-**Dica:** Abra o arquivo `README.md` e clique em `Open Preview to the Side` para facilitar a construção da aplicação.
+### Navegar até a Pasta do Projeto
 
-**Dica:** Abra um terminal utilizando a IDE clicando em `Terminal` e `New Terminal`.
-
-### Navegando até a Pasta do Projeto
-
-Em seguida, navegue até a pasta do projeto (`portal_biblioteca`) dentro da pasta baixada do github (`aula-django-04`):
+Navegue até a pasta do projeto (`code`) dentro da pasta baixada do Github (`aula-django-04`):
 
 ```bash
 cd aula-django-04/
-cd portal_biblioteca/
+cd code/
 ```
 
-### Criando o Ambiente Virtual
+### Criar o Ambiente Virtual
 
-Crie o ambiente virtual (venv) para isolar as instalações/dependências do Python:
-
-Unix/macOS
+Crie um ambiente virtual para isolar as dependências do projeto:
 
 ```bash
 python3 -m venv venv
 ```
 
-Windows
+**Observação:** no exemplo acima, o segundo nome `venv` é o nome que escolhemos para o nosso ambiente virtual (isso pode ser alterado).
 
-```bash
-py -m venv venv
-```
+### Ativar o Ambiente Virtual
 
-**OBS:** no comando acima, o segundo nome `venv` é o nome que escolhemos para o nosso ambiente virtual (isso pode ser alterado).
-
-### Ativando o Ambiente Virtual
-
-Ative o ambiente virtual (venv) no seu computador utilizando o comando abaixo:
-
-**Sistema Operacional:** Unix/Mac OS:
+Ative o ambiente virtual no seu computador utilizando o comando:
 
 ```bash
 source venv/bin/activate
 ```
 
-**Sistema Operacional:** Windows
-
-```bash
-Set-ExecutionPolicy Unrestricted -Scope Process
-venv\Scripts\activate.bat
-```
-
-Quando desejar sair do ambiente virtual, basta digitar:
+Para sair do ambiente virtual:
 
 ```bash
 deactivate
@@ -274,25 +262,19 @@ deactivate
 
 ### Fluxo de Trabalho no Django
 
-A seguir é apresentado um fluxo de trabalho que pode ser seguido durante o desenvolvimento de um projeto utilizando o Django.
+A seguir, descreve-se um fluxo de trabalho que pode ser adotado durante o desenvolvimento de projetos com o framework Django.
 
 [![](https://mermaid.ink/img/pako:eNqN1E1y2yAUB_CrMHThTVLvveiMbcnfX9Nm0UTKgkrPDikCFZBTNxPfJaseoNMT-GJ9Qq5DNSyqlfjzAwF6wzPNVA60R7dCPWUPTFtyE6WS4NNPUjqVxjLBTj9Pv8GQFWRgzOlVc2ZSek-urz-QAaohBppstHoEq4hUJHpkcqeQNDMNnBxeZL8sA2roVJR0U9q3FRP8B9KOAWu53Jn35aGT0jQ948jhuIUL3Is40-5Zxk6Oaum-3n3zN1CUglkwb3rk9Dik-_pbxffKkNjY06vlmfLGjd24SWs9ew5PreVMHJyGPtCpdHvxU6dnrWlZXnDZOpCZk_P_O725w4sax98hq2xtMyUEZBZ_OO7N1wunl__qgn2Fgu80YiWNz5eOr1rcUfDdyrl14jNdSQN6D7pzKYu1YxtkfYnbMsg-gqmEZbmrtRXbww7ftRvRjNk0Bec3Ir8R-42R3xj7jYnfmNaTN8HnZP1F8x2zp1-aq3tyPB7JbdJdlxmeBRN_f95t3XGHecaM63Bbb_qMPQhAseVC9N6NooEfx-F4FI7H4XgSjqft2O-8u3RGfhyF41k4nofjRThehuOVH9MrWoAuGM_xonquWUrtAxSQ0h6-5rBlWA9YWvIFKaus-nSQGe1ZXcEVrcocKy_iDCuwoL0tEwZTyLlVetlcfu4OfPkDBV6NXw?type=png)](https://mermaid.live/edit#pako:eNqN1E1y2yAUB_CrMHThTVLvveiMbcnfX9Nm0UTKgkrPDikCFZBTNxPfJaseoNMT-GJ9Qq5DNSyqlfjzAwF6wzPNVA60R7dCPWUPTFtyE6WS4NNPUjqVxjLBTj9Pv8GQFWRgzOlVc2ZSek-urz-QAaohBppstHoEq4hUJHpkcqeQNDMNnBxeZL8sA2roVJR0U9q3FRP8B9KOAWu53Jn35aGT0jQ948jhuIUL3Is40-5Zxk6Oaum-3n3zN1CUglkwb3rk9Dik-_pbxffKkNjY06vlmfLGjd24SWs9ew5PreVMHJyGPtCpdHvxU6dnrWlZXnDZOpCZk_P_O725w4sax98hq2xtMyUEZBZ_OO7N1wunl__qgn2Fgu80YiWNz5eOr1rcUfDdyrl14jNdSQN6D7pzKYu1YxtkfYnbMsg-gqmEZbmrtRXbww7ftRvRjNk0Bec3Ir8R-42R3xj7jYnfmNaTN8HnZP1F8x2zp1-aq3tyPB7JbdJdlxmeBRN_f95t3XGHecaM63Bbb_qMPQhAseVC9N6NooEfx-F4FI7H4XgSjqft2O-8u3RGfhyF41k4nofjRThehuOVH9MrWoAuGM_xonquWUrtAxSQ0h6-5rBlWA9YWvIFKaus-nSQGe1ZXcEVrcocKy_iDCuwoL0tEwZTyLlVetlcfu4OfPkDBV6NXw)
 
-### Instalando o Django
+### Instalar o Django
 
-Instale o django dentro do ambiente virtual criado (testado na versão 5.0.3):
-
-```bash
-pip3 install django
-```
-
-ou
+Instale o Django dentro do ambiente virtual criado (testado na versão 5.0):
 
 ```bash
-python -m pip install Django
+python3 -m pip install django
 ```
 
-Verifique a versão instalada do django (para ter certeza que tudo ocorreu bem):
+Verifique a versão instalada:
 
 ```bash
 django-admin --version
@@ -304,273 +286,63 @@ ou
 python3 -m django --version
 ```
 
-**OBS:** Caso o terminal não encontre o django-admin, execute o seguinte comando (utilizado geralmente quando não se utiliza o venv no laboratório DCC07):
+**Observação:** caso o terminal não encontre o django-admin, execute o seguinte comando (utilizado geralmente quando não se utiliza o venv):
 
 ```bash
 export PATH=$PATH:~/.local/bin
 ```
 
-### Instalando o WhiteNoise
+### Instalar o WhiteNoise
 
 Instale o WhiteNoise dentro do ambiente virtual:
 
 ```bash
-pip3 install whitenoise
+python3 -m pip install whitenoise
 ```
 
-### Executando o Projeto
+### Executar o Projeto
 
-Antes de executar o projeto, execute o comando para fazer as migrações:
+Antes de executar o projeto, aplique as migrações do banco de dados:
 
 ```bash
 python3 manage.py migrate
 ```
 
-Em seguida, execute comando abaixo para fazer a cópia dos arquivos estáticos:
+Em seguida, execute o comando para copiar os arquivos estáticos:
 
 ```bash
 python3 manage.py collectstatic
 ```
 
-Inicie a execução do projeto django criado:
+Inicie a execução do projeto Django:
 
 ```bash
 python3 manage.py runserver
 ```
 
-**OBS:** Por padrão, o servidor de desenvolvimento escuta na porta 8000, mas você pode especificar uma porta diferente como argumento opcional, por exemplo, `python3 manage.py runserver 8081`.
-
-Acesse através do navegdor web a página [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+Acesse no navegador a página [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
 A aula anterior avançou até aqui.
 
-### Mudando o Tema do Ambiente Administrativo para Unfold
+### Adicionar Controle de Usuários
 
-Nesta etapa, iremos mudar o tema do ambiente adminstrativo padrão para o Unfold que é um ambiente mais moderno, robusto e visualmente atraente.
+Esta parte do tutorial foi baseada na [documentação oficial Django](https://docs.djangoproject.com/pt-br/5.0/topics/auth/default/) e também na [videoaula](https://www.youtube.com/watch?v=gdhiA6wObw0).
 
-Para isso, instale o unfold do django utilizando o comando abaixo:
+O Django já oferece diversos recursos prontos para trabalhar com autenticação de usuários e controle de nível de acesso.
 
-```bash
-pip3 install django-unfold
-```
+Vamos adicionar ao nosso projeto um sistema de gestão de usuários, criando em seguida as telas de login e cadastro.
 
-Em seguida, inclua o unfold na variável `INSTALLED_APPS` em `settings.py` conforme abaixo:
-
-```python
-...
-INSTALLED_APPS = [
-    'unfold', # incluir para usar o tema unfold 
-    'django.contrib.admin',
-    ...
-]
-...
-```
-
-Em seguida, execute o comando:
-
-```bash
-python3 manage.py collectstatic
-```
-
-Em seguida, execute a aplicação:
-
-```bash
-python3 manage.py runserver
-```
-
-Para mais informações sobre o Unfold consulte o [link](https://unfoldadmin.com/docs/installation/quickstart/).
-
-### Incluindo Busca nas Tabelas do Ambiente Adminstrativo
-
-Nessa etapa, iremos criar um campo de busca dentro do ambiente administrativo para filtrar dados. Esse recurso é mais adequado para campos de texto, mas pode ser usado em números também como ano.
-
-Para isso, atualize o código do `admin.py` conforme o exemplo abaixo.
-
-```python
-...
-class LivroAdmin(admin.ModelAdmin):
-    list_display = ("nome", "autor", "ano")
-    search_fields = ("nome", "autor") # campo de busca
-
-class TCCAdmin(admin.ModelAdmin):
-    list_display = ("titulo", "autor", "orientador", "ano")
-    search_fields = ("titulo", "autor", "orientador") # campo de busca
-...
-```
-
-Em seguida, execute a aplicação:
-
-```bash
-python3 manage.py runserver
-```
-
-Em seguida, entre no ambiente adminstrativo [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) e então realize buscas nas tabelas Livro e TCC.
-
-### Incluindo Filtros nas Tabelas do Ambiente Adminstrativo
-
-Nessa etapa, iremos criar um filtro dentro do ambiente administrativo para filtrar dados. Esse filtro é adicionado na barra lateral, permitindo filtrar itens com base em determinados campos. Ideal para campos com valores repetitivos, como `status` ou `categoria`.
-
-Para isso, atualize o código do `admin.py` conforme o exemplo abaixo.
-
-```python
-...
-class LivroAdmin(admin.ModelAdmin):
-    list_display = ("nome", "autor", "ano")
-    search_fields = ("nome", "autor")
-    list_filter = ("autor", "ano") # campos para filtro
-
-class TCCAdmin(admin.ModelAdmin):
-    list_display = ("titulo", "autor", "orientador", "ano")
-    search_fields = ("titulo", "autor", "orientador")
-    list_filter = ("autor", "orientador", "ano") # campos para filtro
-...
-```
-
-Em seguida, execute a aplicação:
-
-```bash
-python3 manage.py runserver
-```
-
-Em seguida, entre no ambiente adminstrativo [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) e então realize filtros nas tabelas Livro e TCC.
-
-### Incluindo Outros Detalhes no Admin.py
-
-Nesta etapa, iremos incluir mais alguns detalhes para personalização do ambiente de administração do Django. O primeiro detalhe incluso é uma ordenação padrão dos registros ao serem exibidos na interface de administração. O segundo detalhe incluso é permitir que determinados campos sejam editados diretamente na lista de itens. Por fim, alguns detalhes foram inclusos de customização do título e cabeçalho da interface de administração.
-
-Assim, inclua as seguintes modificações no arquivo `admin.py`:
-
-```python
-...
-class TCCAdmin(admin.ModelAdmin):
-    ...
-    ordering = ('autor',)    # para ordenação inicial dos dados
-    list_editable = ('ano',) # para edição dos campos diretamente na lista de itens
-...
-admin.site.site_header = "Administração da Biblioteca"
-admin.site.index_title = "Bem-vindo a Administração do Portal Biblioteca"
-```
-
-Em seguida, execute a aplicação:
-
-```bash
-python3 manage.py runserver
-```
-
-Agora, acesse o ambiente administrativo e analise as modificações realizadas.
-
-### Incluindo Testes Unitários no Django
-
-Nesta etapa, iremos incluir testes de software no Django. O Django oferece uma estrutura robusta com o módulo `django.test`. Essa estrutura permite criar testes para verificar o comportamento de sua aplicação, ajudando a assegurar que as funcionalidades implementadas funcionam conforme esperado. 
-
-O Django utiliza o módulo unittest do Python, que permite a criação de classes de teste. Por padrão, o Django criará um banco de dados temporário para os testes, garantindo que o banco de dados principal não seja afetado.
-
-Em Django, os testes geralmente são colocados no arquivo `tests.py` dentro de cada aplicativo (app). A estrutura básica para criar um teste em Django é a seguinte:
-
-1. Importar TestCase do módulo `django.test`.
-2. Criar uma classe de teste que herda de `TestCase`.
-3. Escrever métodos de teste dentro dessa classe. Cada método deve começar com `test_`.
-
-Escreva o código a seguir no arquivo `tests.py` da pasta `biblioteca`.
-
-```python
-from django.test import TestCase
-from .models import Livro
-from .models import TCC
-
-class ModeloTestCase(TestCase):
-    def setUp(self):
-        Livro.objects.create(nome="Introdução ao Django", autor="João Silva", ano=2024)
-        TCC.objects.create(titulo="Análise de Sistemas Web", autor="José Carvalho", orientador="Prof. Carlos Souza", ano=2023)
-
-    def test_criacao_e_conteudo_livro(self):
-        livro = Livro.objects.get(nome="Introdução ao Django")
-        self.assertEqual(livro.autor, "João Silva")
-        self.assertEqual(livro.ano, 2024)
-
-    def test_criacao_e_conteudo_tcc(self):
-        tcc = TCC.objects.get(titulo="Análise de Sistemas Web")
-        self.assertEqual(tcc.autor, "José Carvalho")
-        self.assertEqual(tcc.orientador, "Prof. Carlos Souza")
-        self.assertEqual(tcc.ano, 2023)
-```
-
-**Explicação**: 
-* `setUp`: Esse método é executado antes de cada teste e é útil para configurar dados de teste, como a criação de objetos no banco de dados.
-* **Método de Teste**: Cada método de teste deve começar com `test_` e testar uma funcionalidade específica. Nesse exemplo, o método `test_criacao_e_conteudo_livro` verifica se o livro foi criado com o autor e ano correto.
-* **Assertions**: `self.assertEqual` é uma das muitas "assertions" disponíveis para verificar condições nos testes. Outras comuns incluem `self.assertTrue`, `self.assertFalse`, `self.assertIn`, entre outras.
-
-Em seguida, execute o teste:
-
-```bash
-python manage.py test
-```
-
-Para testar uma view (por exemplo, uma página de detalhe de um TCC), o Django permite simular requisições HTTP usando o cliente de teste (`self.client`). Inclua as seguintes modificações no código do arquivo `tests.py`:
-
-```python
-...
-from django.urls import reverse
-...
-class ViewTCCTestCase(TestCase):
-    def setUp(self):
-        self.tcc = TCC.objects.create(titulo="Análise de Interfaces Web", autor="Cesar Silva", orientador="Prof. Ricardo Souza", ano=2022)
-
-    def test_view_tcc_detalhes(self):
-        url = reverse("tcc_detalhes", args=[self.tcc.id])
-        response = self.client.get(url)
-        #print(url)
-        #print(response.content.decode("utf-8"))
-        self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "Análise de Interfaces Web")
-```
-
-**Explicação**: Neste exemplo, o teste verifica se a página de detalhes do TCC é acessada corretamente e contém o título do TCC. O comando `reverse` é utilizado para resolver o caminho de uma URL com base no nome dado a ela no arquivo de configuração de URLs (`urls.py`).
-
-Em seguida, execute o teste:
-
-```bash
-python manage.py test
-```
-
-### Configurando o Fuso Horário do Brasil
-
-Nesse etapa, iremos configurar o fuso horário padrão da aplicação para o fuso horário de São Paulo (mesmo utilizado em MG).
-
-Para isso, realize a seguinte atualização na variável `TIME_ZONE` em `settings.py` conforme abaixo:
-
-```python
-...
-TIME_ZONE = 'America/Sao_Paulo'
-...
-```
-
-**Explicação**: O atributo `TIME_ZONE` especifica em qual fuso horário o Django deve armazenar e manipular dados de data e hora no banco de dados, além de exibir essas informações nas views e na interface de administração. Nesse [link](https://github.com/guilhermeonrails/language_code_django/blob/tz_list/list.py) tem uma lista com as opções disponíveis de fuso horário.
-
-Em seguida, execute o servidor, faça uma atualização qualquer no modelo via ambiente adminstrativo e veja as informações relativas as mudanças nas informações de "Ações recentes" do ambiente adminstrativo.
-
-Para mais informações sobre as configurações disponíveis no arquivo de settings, consulte o [link](https://docs.djangoproject.com/en/5.1/ref/settings/).
-
-### Adicionando Controle de Usuários no Django
-
-Esta parte do tutorial foi baseada na [documentação oficial django](https://docs.djangoproject.com/pt-br/5.0/topics/auth/default/) e também na [videoaula](https://www.youtube.com/watch?v=gdhiA6wObw0).
-
-O Django possui já prontos diversos recursos para trabalhar com autenticação de usuários e controle de nível de acesso.
-
-Agora, iremos adicionar em nosso projeto um sistema de gestão de usuários. Para criarmos na sequência as telas de login e cadastro na plataforma.
-
-Para isso, iremos criar uma outra aplicação/aplicativo web dentro do nosso projeto. Assim, digite o seguinte conteúdo.
+Para isso, crie uma nova aplicação chamada `usuarios` com o comando:
 
 ```bash
 python3 manage.py startapp usuarios
 ```
 
-Agora, atualize a lista `INSTALLED_APPS` em `settings.py` na pasta `portal_biblioteca`:
+Em seguida, atualize a lista `INSTALLED_APPS` no arquivo `portal_biblioteca/settings.py`:
 
 ```python
 ...
 INSTALLED_APPS = [
-    'unfold',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -578,24 +350,24 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'biblioteca',
-    'usuarios', #adicone seu app aqui 
+    'usuarios',               #adicone seu app aqui 
 ]
 ...
 ```
 
-Agora, iremos criar uma pasta chamada `templates` dentro da aplicação `usuarios`. Nesta pasta, iremos criar um arquivo chamado `login.html` com o seguinte conteúdo:
+Agora, iremos criar uma pasta chamada `templates` dentro da aplicação `usuarios`. Nesta pasta, crie um arquivo chamado `login.html` com o conteúdo:
 
 ```html
 <h1>Login</h1>
 ```
 
-Ainda nesta pasta, iremos criar também um arquivo chamado `cadastro.html` com o seguinte conteúdo:
+Ainda nesta pasta, crie um arquivo chamado `cadastro.html` com o conteúdo:
 
 ```html
 <h1>Cadastro</h1>
 ```
 
-Em seguida, precisamos definir as views do nosso sistema de login e cadastro. Assim, digite o código abaixo no arquivo `views.py` na pasta `usuarios`:
+Em seguida, precisamos definir as views do nosso sistema de login e cadastro. Assim, no arquivo `usuarios/views.py` digite o código abaixo:
 
 ```python
 from django.shortcuts import render
@@ -607,7 +379,7 @@ def cadastro(request):
     return render(request, 'cadastro.html')
 ```
 
-Agora, crie na pasta `usuarios` um arquivo chamado `urls.py` com o seguinte conteúdo:
+Na pasta `usuarios`, crie o arquivo `urls.py` com o conteúdo abaixo:
 
 ```python
 from django.urls import path
@@ -628,23 +400,23 @@ from django.urls import include, path
 urlpatterns = [
     path('', include('biblioteca.urls')),
     path('admin/', admin.site.urls),
-    path('auth/', include('usuarios.urls')),   #adicione essa linha aqui
+    path('auth/', include('usuarios.urls')),   #linha adicionada
 ]
 ```
 
-Agora, reinicie o servidor:
+Reinicie o servidor:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Por fim, acesse o endereço [127.0.0.1:8000/](127.0.0.1:8000/). Navegue pelas abas Login e Cadastre-se.
+Acesse a URL: [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Navegue pelas abas Login e Cadastre-se para visualizar as páginas criadas.
 
-### Melhorando a Tela de Cadastro
+### Melhorar a Tela de Cadastro
 
-Agora, iremos melhorar a exibição da tela de Cadastro.
+Nesta etapa, vamos aprimorar a exibição da tela de Cadastro.
 
-Assim, no arquivo `cadastro.html` digite o seguinte:
+No arquivo `usuarios/templates/cadastro.html`, insira o seguinte código:
 
 ```html
 {% extends "base.html" %}
@@ -723,11 +495,13 @@ Assim, no arquivo `cadastro.html` digite o seguinte:
 {% endblock %}
 ```
 
-**Explicação:** O código acima cria um formulário com os seguintes campos: usuário, email, senha, repetir senha e botão cadastrar. Neste formulário, quando clicado no botão "Cadastrar" enviará uma ação via método POST para a url de nome `cadastro` (nome definido no arquivo `url.py`). A tag `csrf_token` é necessária para fazer uma verificação de segurança.
+Esse código cria um formulário com os seguintes campos: usuário, e-mail, senha, repetir senha e um botão Cadastrar. Ao clicar em Cadastrar, os dados são enviados via método POST para a URL de nome `cadastro` (definida no arquivo `usuarios/urls.py` pela tag `name`). A tag `{% csrf_token %}` é obrigatória para validação de segurança.
 
-**Explicação:** O CSRF Token, que significa "Cross-Site Request Forgery Token" (Token de Proteção contra Solicitação Falsificada entre Sites), é uma medida de segurança utilizada em aplicações da web para proteger contra ataques CSRF (Cross-Site Request Forgery), também conhecidos como ataques de falsificação de solicitação entre sites. Um ataque CSRF ocorre quando um invasor engana um usuário autenticado a executar ações indesejadas em um site sem o conhecimento ou consentimento do usuário. Isso é feito explorando o fato de que os navegadores da web geralmente incluem automaticamente cookies de sessão em todas as solicitações para um domínio, incluindo solicitações maliciosas.
+**Explicação:** O CSRF Token (*Cross-Site Request Forgery Token*) é um mecanismo de segurança usado para proteger contra ataques de falsificação de requisições entre sites (*CSRF attacks*). Esses ataques exploram o fato de que navegadores enviam automaticamente cookies de sessão em todas as requisições para um domínio, inclusive em solicitações maliciosas. O token garante que apenas requisições legítimas sejam aceitas.
 
-Em seguida, atualize o código do método cadastro na `view.py`.
+**Atualizando a view cadastro**
+
+No arquivo `usuarios/views.py`, ajuste a função `cadastro` da seguinte forma:
 
 ```python
 from django.http import HttpResponse
@@ -742,13 +516,15 @@ def cadastro(request): # atualize essa função
         return HttpResponse(usuario)
 ```
 
-Em seguida, acesse o endereço [http://127.0.0.1:8000/auth/cadastro](http://127.0.0.1:8000/auth/cadastro) e efetue um cadastro e analise o resultado na tela.
+Agora, acesse: [http://127.0.0.1:8000/auth/cadastro](http://127.0.0.1:8000/auth/cadastro). Faça um cadastro e observe o resultado exibido na tela.
 
-Até aqui, não efetuamos de fato um cadastro, apenas exibimos na tela a informação do usuário.
+Até este ponto, ainda não salvamos os dados no banco de dados; apenas mostramos o valor enviado na tela.
 
-Agora, iremos inserir as informações cadastradas no BD.
+**Salvando dados no banco de dados**
 
-Assim, atualize o código do método `cadastro` na `view.py`.
+Nesta etapa, iremos inserir as informações cadastradas no BD.
+
+Atualize o código do método `cadastro` no arquivo `usuarios/view.py`.
 
 ```python
 # faça essas inclusões
@@ -776,8 +552,9 @@ def cadastro(request):
         return render(request, 'login.html')
 ```
 
+**Exibindo mensagens de feedback**
 
-Por fim, altere também o código do `cadastro.html` para exibir as mensagens de feedback, conforme código abaixo:
+No arquivo `usuarios/templates/cadastro.html`, adicione o seguinte trecho após o formulário para exibir mensagens de erro ou sucesso:
 
 ```html
 ...
@@ -797,17 +574,17 @@ Por fim, altere também o código do `cadastro.html` para exibir as mensagens de
 ...
 ```
 
-Em seguida, acesse o endereço [http://127.0.0.1:8000/auth/cadastro](http://127.0.0.1:8000/auth/cadastro) e efetue um cadastro e analise o resultado na tela e também no menu administrativo do Django. Efetue também cadastro de dois usuários com mesmo email e analise o resultado.
+Acesse a URL: [http://127.0.0.1:8000/auth/cadastro](http://127.0.0.1:8000/auth/cadastro). Cadastre um novo usuário e verifique o resultado na tela e também no Django Admin. Tente cadastrar dois usuários com o mesmo nome ou e-mail e analise a mensagem exibida.
 
-**OBS:** O Django não armazena senhas brutas (texto não criptografado) no modelo de usuário. Ele armazena apenas um hash da senha.
+**Observação:** o Django não armazena senhas brutas (texto não criptografado) no modelo de usuário. Ele armazena apenas um hash da senha.
 
 Para mais detalhes sobre a classe `User`, consulte a [documentação oficial](https://docs.djangoproject.com/pt-br/5.0/topics/auth/default/).
 
-### Melhorando a Tela de Login
+### Melhorar a Tela de Login
 
-Agora, iremos melhorar a exibição da tela de Login.
+Nesta etapa, vamos aprimorar a exibição da tela de Login.
 
-Assim, atualize o código do arquivo `login.html` para o seguinte:
+Atualize o código do arquivo `login.html` para o seguinte:
 
 ```html
 {% extends "base.html" %}
@@ -862,7 +639,9 @@ Assim, atualize o código do arquivo `login.html` para o seguinte:
 {% endblock %}
 ```
 
-Em seguida, atualize o código do método `login` na `view.py`.
+**Atualizando a view login**
+
+No arquivo `usuarios/views.py`, atualize a função `login` conforme abaixo:
 
 ```python
 # adicione essas importações
@@ -884,25 +663,25 @@ def login(request):
             return render(request, 'login.html')
 ```
 
-Em seguida, acesse o endereço [http://127.0.0.1:8000/auth/login](http://127.0.0.1:8000/auth/login) e  efetue um login e analise o resultado na tela. Tente colocar um usuário válido e um usuário inválido.
+Acesse o endereço: [http://127.0.0.1:8000/auth/login](http://127.0.0.1:8000/auth/login). Faça login com um usuário válido para verificar o acesso. Tente também um login inválido e analise a mensagem de erro exibida.
 
-**Explicação:** As principais diferenças entre "authenticate" e "login" do django são destacadas a seguir:
+**Explicação:** As principais diferenças entre "authenticate" e "login" do Django são destacadas a seguir:
 
-**authenticate:**
-* O método "authenticate" é uma função fornecida pelo Django que é usada para verificar as credenciais de um usuário em um sistema de autenticação.
-* Ele recebe as informações de login do usuário, como nome de usuário e senha, e verifica se essas informações correspondem a um usuário registrado no sistema.
-* Se as credenciais estiverem corretas, o método "authenticate" retornará um objeto de usuário válido que representa o usuário autenticado. Caso contrário, retornará "None".
+* `authenticate`:
+    * O método "authenticate" é uma função fornecida pelo Django que é usada para verificar as credenciais de um usuário em um sistema de autenticação.
+    * Ele recebe as informações de login do usuário, como nome de usuário e senha, e verifica se essas informações correspondem a um usuário registrado no sistema.
+    * Se as credenciais estiverem corretas, o método "authenticate" retornará um objeto de usuário válido que representa o usuário autenticado. Caso contrário, retornará "None".
 
-**login:**
-* O método "login" refere-se ao processo de estabelecer uma sessão de usuário autenticada em um aplicativo da web após a autenticação bem-sucedida.
-* O Django fornece uma função chamada "login" que permite que você associe um objeto de usuário autenticado a uma sessão. Isso é importante para manter o estado de autenticação do usuário durante a sessão.
-* A função "login" normalmente é usada após o usuário ser autenticado com sucesso usando o "authenticate".
+* `login`:
+    * O método "login" refere-se ao processo de estabelecer uma sessão de usuário autenticada em um aplicativo da web após a autenticação bem-sucedida.
+    * O Django fornece uma função chamada "login" que permite que você associe um objeto de usuário autenticado a uma sessão. Isso é importante para manter o estado de autenticação do usuário durante a sessão.
+    * A função "login" normalmente é usada após o usuário ser autenticado com sucesso usando o "authenticate".
 
-### Exibindo Informações na Navbar do Usuário Logado
+### Exibir Informações do Usuário na Navbar
 
-Nesta etapa, iremos colocar algumas informações na navbar sobre o usuário que está logado no sistema. 
+Nesta etapa, iremos adicionar informações sobre o usuário logado diretamente na navbar do sistema.
 
-Para isso, atualize o código o código `base.html`, conforme código abaixo:
+Edite o arquivo `biblioteca/templates/base.html` e insira o seguinte trecho de código:
 
 ```html
 ...
@@ -927,23 +706,27 @@ Para isso, atualize o código o código `base.html`, conforme código abaixo:
 </div>
 ```
 
-Em seguida, é necessário copiar o arquivo `img_avatar.png` da pasta `docs` para a pasta `staticfiles`.
+**Configurando a imagem de avatar**
 
-Em seguida, execute o comando abaixo:
+Copie o arquivo `img_avatar.png` da pasta `docs` para a pasta `staticfiles`.
+
+Em seguida, execute o comando para atualizar os arquivos estáticos:
 
 ```bash
 python3 manage.py collectstatic
 ```
 
-Em seguida, reinicie o servidor:
+Reinicie o servidor:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Por fim, acesse o endereço [http://127.0.0.1:8000](http://127.0.0.1:8000) e analise a nova navbar com informações do usuário logado no sistema.
+Acesse o endereço [http://127.0.0.1:8000](http://127.0.0.1:8000) e verifique a nova navbar, que agora exibe o nome do usuário logado e o avatar.
 
-Repare que a tela principal não está ficando com a configuração do usuário logado. Para resolver isso modifique a view principal no arquivo `views.py` na pasta `biblioteca`.
+**Ajustando a view principal**
+
+Repare que a tela principal não está com a configuração do usuário logado. Para resolver isso, modifique a view principal no arquivo `biblioteca/views.py`:
 
 ```python
 ...
@@ -953,13 +736,13 @@ def principal(request):
 ...
 ```
 
-Execute o programa e analise o resultado.
+Execute novamente o projeto e analise o resultado. Agora, a página principal refletirá corretamente as informações do usuário autenticado.
 
-### Adicionando Logout no Sistema
+### Adicionar Logout no Sistema
 
-Agora, iremos adicionar no nosso sistema o recurso de logout.
+Agora, vamos incluir em nosso sistema o recurso de logout.
 
-Para isso, vá no arquivo `views.py` da pasta `usuarios` e adicione o seguinte conteúdo:
+No arquivo `usuarios/views.py`, adicione o seguinte código:
 
 ```python
 from django.contrib.auth import logout as logout_django
@@ -970,9 +753,11 @@ def logout(request):
     return render(request, 'login.html')
 ```
 
-**Explicação:** Quando você chama `logout()` do django ou `logout_django()` neste caso, os dados da sessão da solicitação atual são completamente limpos. Todos os dados existentes são removidos. Isso evita que outra pessoa use o mesmo navegador para fazer login e ter acesso aos dados da sessão do usuário anterior.
+**Explicação:** ao chamar `logout()` do django (ou `logout_django()` neste caso), os dados da sessão atual são completamente limpos. Todos os dados existentes são removidos. Isso evita que outra pessoa use o mesmo navegador para fazer login e ter acesso aos dados da sessão do usuário anterior.
 
-Em seguida, vá no arquivo `urls.py` da pasta `usuarios` e adicione a seguinte rota.
+**Definindo a rota de logout**
+
+No arquivo `usuarios/urls.py`, adicione a nova rota.
 
 ```python
 ...
@@ -980,61 +765,271 @@ Em seguida, vá no arquivo `urls.py` da pasta `usuarios` e adicione a seguinte r
 ...
 ```
 
-Por fim, acesse o endereço [http://127.0.0.1:8000](http://127.0.0.1:8000). Faça logout e login e analise a navbar.
+Reinicie o servidor e acesse o endereço [http://127.0.0.1:8000](http://127.0.0.1:8000). Faça login no sistema. Em seguida, realize o logout. Tente logar novamente e observe como a navbar se comporta após a saída do usuário.
 
-### Disponibilizando o Dashboard Apenas para Usuários Logados
+### Disponibilizar o Dashboard Apenas para Usuários Logados
 
-Agora, iremos permitir que a visualização dos dashboards esteja disponível apenas se o usuário estiver logado na plataforma.
+Agora, vamos restringir o acesso ao dashboard, permitindo que ele seja visualizado apenas por usuários que estejam logados na plataforma.
 
-Dessa maneira, atualize o código da função dashboard em `view.py` da pasta `biblioteca` para o seguinte:
+Dessa maneira, atualize o código da função `dashboard` em `biblioteca/view.py` conforme abaixo:
 
 ```python
 ...
 def dashboard(request):
     if request.user.is_authenticated:
-        qtd = QuantitativoMateriais.objects.all().values()
-        template = loader.get_template('dashboard.html')
-        v = qtd[0]
+        qtdLivros = Livro.objects.count()
+        qtdTCCs = TCC.objects.count()
         context = {
-            'labels': ['Livros', 'TCCs', 'Dissertações', 'Teses', 'Apostilas', 'Jornais'],
-            'data': [v['livros'], v['tccs'], v['dissertacoes'], v['teses'], v['apostilas'], v['jornais']]
+            'labels': ['Livros', 'TCCs'],
+            'data': [qtdLivros, qtdTCCs]
         }
+        template = loader.get_template('dashboard.html')
         return HttpResponse(template.render(context, request))
     return HttpResponse("Você precisa estar logado!")
 ```
 
-Em seguida, abra uma guia anônima do navegador e acesse o endereço [http://127.0.0.1:8000](http://127.0.0.1:8000). Tente acessar a tela de dashboard. Na sequência, faça login na plataforma e então tente acessar o dashboard.
+Agora, abra uma guia anônima do navegador e acesse [http://127.0.0.1:8000](http://127.0.0.1:8000). Tente acessar a tela de dashboard sem login, então você verá a mensagem de bloqueio. Faça login e tente novamente, então o dashboard será exibido corretamente.
 
-Uma outra forma de fazer a mesma operação é utilizando o decorador `login_required`. Atualize o seu código da função dashborad em `view.py` da pasta `biblioteca` para o seguinte:
+**Usando o decorador login_required**
+
+Uma outra forma de fazer a mesma operação é utilizando o decorador `login_required`. Atualize o seu código da função dashborad em `biblioteca/view.py` para o seguinte:
 
 ```python
 from django.contrib.auth.decorators import login_required
 ...
 @login_required(login_url="/auth/login")
 def dashboard(request):
-    qtd = QuantitativoMateriais.objects.all().values()
-    template = loader.get_template('dashboard.html')
-    v = qtd[0]
+    qtdLivros = Livro.objects.count()
+    qtdTCCs = TCC.objects.count()
     context = {
-        'labels': ['Livros', 'TCCs', 'Dissertações', 'Teses', 'Apostilas', 'Jornais'],
-        'data': [v['livros'], v['tccs'], v['dissertacoes'], v['teses'], v['apostilas'], v['jornais']]
+        'labels': ['Livros', 'TCCs'],
+        'data': [qtdLivros, qtdTCCs]
     }
+    template = loader.get_template('dashboard.html')
     return HttpResponse(template.render(context, request))
 ```
 
 Em seguida, abra uma guia anônima do navegador e acesse o endereço [http://127.0.0.1:8000](http://127.0.0.1:8000). Tente acessar a tela de dashboard. Perceba que portal redireciona para a tela de login, isso ocorre, pois colocamos isso no parâmetro `login_url`. Na sequência, faça login na plataforma e então tente acessar o dashboard.
 
-## Próximas Etapas
+Esse ajuste garante que apenas usuários autenticados tenham acesso ao dashboard, aumentando a segurança do sistema.
 
-<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
+### Incluir Testes Unitários
 
-Agora que você sabe como construir uma página web completa utilizando o framework Django, utilize os conhecimentos e exemplos aqui apresentados para fazer o seu trabalho final de implementação.
+Nesta etapa, iremos incluir testes de software no projeto. O Django oferece uma estrutura robusta por meio do módulo `django.test`, que permite criar testes para verificar o comportamento da aplicação, garantindo que as funcionalidades implementadas funcionem conforme o esperado.
+
+O Django utiliza o módulo `unittest` do Python, que permite a criação de classes de teste. Por padrão, o Django criará um banco de dados temporário para os testes, garantindo que o banco de dados principal não seja afetado.
+
+Em Django, os testes geralmente são colocados no arquivo `tests.py` dentro de cada aplicativo (app). A estrutura básica para criar um teste em Django é a seguinte:
+
+1. Importar TestCase do módulo `django.test`.
+2. Criar uma classe de teste que herda de `TestCase`.
+3. Escrever métodos de teste dentro dessa classe. Cada método deve começar com `test_`.
+
+**Exemplo de teste de modelos**
+
+No arquivo `biblioteca/tests.py`, adicione o seguinte código:
+
+```python
+from django.test import TestCase
+from .models import Livro
+from .models import TCC
+
+class ModeloTestCase(TestCase):
+    def setUp(self):
+        Livro.objects.create(nome="Introdução ao Django", autor="João Silva", ano=2024)
+        TCC.objects.create(titulo="Análise de Sistemas Web", autor="José Carvalho", orientador="Prof. Carlos Souza", ano=2023)
+
+    def test_criacao_e_conteudo_livro(self):
+        livro = Livro.objects.get(nome="Introdução ao Django")
+        self.assertEqual(livro.autor, "João Silva")
+        self.assertEqual(livro.ano, 2024)
+
+    def test_criacao_e_conteudo_tcc(self):
+        tcc = TCC.objects.get(titulo="Análise de Sistemas Web")
+        self.assertEqual(tcc.autor, "José Carvalho")
+        self.assertEqual(tcc.orientador, "Prof. Carlos Souza")
+        self.assertEqual(tcc.ano, 2023)
+```
+
+**Explicação**:
+
+* `setUp`: Esse método é executado antes de cada teste e é útil para configurar dados de teste, como a criação de objetos no banco de dados.
+* **Método de Teste**: Cada método de teste deve começar com `test_` e testar uma funcionalidade específica. Nesse exemplo, o método `test_criacao_e_conteudo_livro` verifica se o livro foi criado com o autor e ano correto.
+* **Assertions**: `self.assertEqual` é uma das muitas "assertions" disponíveis para verificar condições nos testes. Outras comuns incluem `self.assertTrue`, `self.assertFalse`, `self.assertIn`, entre outras.
+
+Em seguida, execute o teste:
+
+```bash
+python manage.py test
+```
+
+**Exemplo de teste de view**
+
+O Django permite simular requisições HTTP usando o cliente de testes (`self.client`). Para testar uma view, como, por exemplo, uma página de detalhe de um TCC, no mesmo arquivo `biblioteca/tests.py`, adicione:
+
+```python
+...
+from django.urls import reverse
+...
+class ViewTCCTestCase(TestCase):
+    def setUp(self):
+        self.tcc = TCC.objects.create(titulo="Análise de Interfaces Web", autor="Cesar Silva", orientador="Prof. Ricardo Souza", ano=2022)
+
+    def test_view_tcc_detalhes(self):
+        url = reverse("tcc_detalhes", args=[self.tcc.id])
+        response = self.client.get(url)
+        #print(url)
+        #print(response.content.decode("utf-8"))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Análise de Interfaces Web")
+```
+
+**Explicação**: Neste exemplo, o teste verifica se a página de detalhes do TCC é acessada corretamente e contém o título do TCC. O comando `reverse` é utilizado para resolver o caminho de uma URL com base no nome dado a ela no arquivo de configuração de URLs (`biblioteca/urls.py`).
+
+Em seguida, execute o teste:
+
+```bash
+python manage.py test
+```
+
+**Dica:** habilite os prints comentados no método `test_view_tcc_detalhes` para inspecionar a saída gerada.
+
+### Mudar o Tema do Ambiente Administrativo para Unfold
+
+Nesta etapa, vamos alterar o tema padrão do ambiente administrativo do Django para o Unfold, que oferece uma interface mais moderna, robusta e visualmente atraente.
+
+Para isso, instale o unfold do Django utilizando o comando abaixo:
+
+```bash
+python3 -m pip install django-unfold
+```
+
+Em seguida, inclua o unfold na variável `INSTALLED_APPS` em `portal_biblioteca/settings.py` conforme abaixo:
+
+```python
+...
+INSTALLED_APPS = [
+    'unfold', # incluir para usar o tema unfold 
+    'django.contrib.admin',
+    ...
+]
+...
+```
+
+Execute o comando:
+
+```bash
+python3 manage.py collectstatic
+```
+
+Execute a aplicação:
+
+```bash
+python3 manage.py runserver
+```
+
+Para mais informações sobre o Unfold, consulte a [documentação oficial](https://unfoldadmin.com/docs/installation/quickstart/).
+
+### Incluir Busca nas Tabelas do Ambiente Adminstrativo
+
+Nesta etapa, iremos adicionar um campo de busca no ambiente administrativo para facilitar o filtro de dados. Esse recurso é especialmente útil para campos de texto, mas também pode ser aplicado a valores numéricos, como o campo ano.
+
+Atualize o código do arquivo `biblioteca/admin.py` conforme o exemplo abaixo.
+
+```python
+...
+class LivroAdmin(admin.ModelAdmin):
+    list_display = ("nome", "autor", "ano")
+    search_fields = ("nome", "autor") # campo de busca
+
+class TCCAdmin(admin.ModelAdmin):
+    list_display = ("titulo", "autor", "orientador", "ano")
+    search_fields = ("titulo", "autor", "orientador") # campo de busca
+...
+```
+
+Execute a aplicação:
+
+```bash
+python3 manage.py runserver
+```
+
+Acesse o ambiente administrativo em [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) e realize buscas nas tabelas Livro e TCC.
+
+### Incluir Filtros nas Tabelas do Ambiente Adminstrativo
+
+Agora, vamos adicionar filtros no ambiente administrativo. Esse recurso aparece na barra lateral e permite filtrar registros com base em determinados campos. É especialmente útil para campos com valores repetitivos, como status ou categoria.
+
+Atualize o código do arquivo `biblioteca/admin.py` conforme o exemplo abaixo:
+
+```python
+...
+class LivroAdmin(admin.ModelAdmin):
+    list_display = ("nome", "autor", "ano")
+    search_fields = ("nome", "autor")
+    list_filter = ("autor", "ano") # campos para filtro
+
+class TCCAdmin(admin.ModelAdmin):
+    list_display = ("titulo", "autor", "orientador", "ano")
+    search_fields = ("titulo", "autor", "orientador")
+    list_filter = ("autor", "orientador", "ano") # campos para filtro
+...
+```
+
+Execute a aplicação:
+
+```bash
+python3 manage.py runserver
+```
+
+Reinicie a aplicação e acesse o ambiente administrativo [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/). Em seguida, utilize os filtros nas tabelas Livro e TCC.
+
+### Adicionar Outros Detalhes no Admin.py
+
+Nesta etapa, iremos incluir mais algumas personalizações no ambiente administrativo:
+
+* Ordenação padrão dos registros exibidos.
+* Edição direta de campos na lista de itens.
+* Customização de títulos do painel administrativo.
+
+Assim, inclua as seguintes modificações no arquivo `biblioteca/admin.py`:
+
+```python
+...
+class TCCAdmin(admin.ModelAdmin):
+    ...
+    ordering = ('autor',)    # para ordenação inicial dos dados
+    list_editable = ('ano',) # para edição dos campos diretamente na lista de itens
+...
+admin.site.site_header = "Administração da Biblioteca"
+admin.site.index_title = "Bem-vindo a Administração do Portal Biblioteca"
+```
+
+Execute novamente a aplicação e verifique as alterações no ambiente administrativo.
+
+### Configurar o Fuso Horário do Brasil
+
+Por fim, vamos configurar o fuso horário padrão da aplicação para São Paulo (mesmo utilizado em MG).
+
+No arquivo `portal_biblioteca/settings.py`, atualize a variável `TIME_ZONE`:
+
+```python
+...
+TIME_ZONE = 'America/Sao_Paulo'
+...
+```
+
+O atributo `TIME_ZONE` especifica em qual fuso horário o Django deve armazenar e manipular dados de data e hora no banco de dados, além de exibir essas informações nas views e na interface de administração. O [link](https://github.com/guilhermeonrails/language_code_django/blob/tz_list/list.py) trás uma lista com as opções disponíveis de fuso horário.
+
+Reinicie o servidor, faça uma atualização em qualquer registro pelo ambiente administrativo e observe como as mudanças aparecem corretamente na seção Ações recentes.
+
+Para mais informações sobre as configurações disponíveis no arquivo de `settings.py`, consulte a [documentação oficial do Django](https://docs.djangoproject.com/en/5.1/ref/settings/).
 
 ## Créditos e Referências
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-Este tutorial foi inspirado nos seguintes recursos:
+Este tutorial foi inspirado nos seguintes materiais:
 
-* [Documentação oficial do django](https://docs.djangoproject.com/pt-br/5.0/)
-* [Curso de Django da w3schools](https://www.w3schools.com/django/index.php)
+* [Documentação oficial do Django](https://docs.djangoproject.com/pt-br/5.0/)
+* [Curso de Django da W3Schools](https://www.w3schools.com/django/index.php)
