@@ -894,7 +894,112 @@ python manage.py test
 
 **Dica:** habilite os prints comentados no método `test_view_tcc_detalhes` para inspecionar a saída gerada.
 
-### Mudar o Tema do Ambiente Administrativo para Unfold
+### Opção1: Mudar o Tema do Ambiente Administrativo para Grappelli
+
+A seguir será mostrado três opções de temas (Grappelli, Jazzmin e Unfold) para você configurar o ambiente administrativo. Escolha apenas uma opção para fazer.
+
+Nesta etapa, vamos alterar o tema padrão do ambiente administrativo do Django para o Grappelli, que oferece uma interface bem polida, visual clássico, mais "clean" porém com estilo tradicional. Oferece diversas customizações no tema, dashboard, ordenação inline, autocomplete.
+
+Para isso, instale o Grappelli do Django utilizando o comando abaixo:
+
+```bash
+python3 -m pip install django-grappelli
+```
+
+Em seguida, inclua o Grappelli na variável `INSTALLED_APPS` em `portal_biblioteca/settings.py` conforme abaixo:
+
+```python
+...
+INSTALLED_APPS = [
+    'grappelli',     # incluir para usar o tema grappelli 
+    'django.contrib.admin',
+    ...
+]
+...
+```
+
+No arquivo `portal_biblioteca/urls.py`, adicione as URLs do Grappelli antes das do admin:
+
+```python
+...
+urlpatterns = [
+    path('grappelli/', include('grappelli.urls')),  # URL do Grappelli
+    path('', include('biblioteca.urls')),
+    path('admin/', admin.site.urls),
+    path('auth/', include('usuarios.urls')),
+]
+...
+```
+
+Execute o comando:
+
+```bash
+python3 manage.py migrate
+```
+
+Execute a aplicação:
+
+```bash
+python3 manage.py runserver
+```
+
+Para mais informações sobre o Grappelli, consulte a [documentação oficial](https://django-grappelli.readthedocs.io/).
+
+### Opção2: Mudar o Tema do Ambiente Administrativo para Jazzmin
+
+Nesta etapa, vamos alterar o tema padrão do ambiente administrativo do Django para o Jazzmin, que oferece uma interface mais moderna, robusta e visualmente atraente.
+
+Para isso, instale o Jazzmin do Django utilizando o comando abaixo:
+
+```bash
+python3 -m pip install django-jazzmin
+```
+
+Em seguida, inclua o jazzmin na variável `INSTALLED_APPS` em `portal_biblioteca/settings.py` conforme abaixo:
+
+```python
+...
+INSTALLED_APPS = [
+    'jazzmin',      # incluir para usar o tema jazzmin 
+    'django.contrib.admin',
+    'django.contrib.auth',
+    ...
+]
+...
+```
+
+Se desejar, você pode personalizar o visual no `portal_biblioteca/settings.py` com as variáveis `JAZZMIN_SETTINGS` e `JAZZMIN_UI_TWEAKS`.
+
+```python
+...
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Portal Biblioteca",
+    "site_header": "Administração Biblioteca",
+    "site_brand": "Portal Biblioteca",
+    "welcome_sign": "Bem-vindo ao ambiente de gestão do Portal da Biblioteca",
+    "copyright": "Universidade Federal de Lavras",
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "cosmo",   # opções: cosmo, flatly, cyborg, lumen, etc (temas do Bootswatch)
+    "navbar": "navbar-dark bg-primary",
+    "sidebar": "sidebar-dark-primary",
+    "footer_fixed": True,
+}
+```
+
+**Atenção:** Para informações sobre os valores da variável `theme`, veja [site do Bootswatch](https://bootswatch.com/).
+
+Execute a aplicação:
+
+```bash
+python3 manage.py runserver
+```
+
+Para mais informações sobre o Jazzmin, consulte a [documentação oficial](https://django-jazzmin.readthedocs.io/).
+
+### Opção3: Mudar o Tema do Ambiente Administrativo para Unfold
 
 Nesta etapa, vamos alterar o tema padrão do ambiente administrativo do Django para o Unfold, que oferece uma interface mais moderna, robusta e visualmente atraente.
 
@@ -904,13 +1009,14 @@ Para isso, instale o unfold do Django utilizando o comando abaixo:
 python3 -m pip install django-unfold
 ```
 
-Em seguida, inclua o unfold na variável `INSTALLED_APPS` em `portal_biblioteca/settings.py` conforme abaixo:
+Em seguida, inclua o Unfold na variável `INSTALLED_APPS` em `portal_biblioteca/settings.py` conforme abaixo:
 
 ```python
 ...
 INSTALLED_APPS = [
-    'unfold', # incluir para usar o tema unfold 
+    'unfold',      # incluir para usar o tema unfold 
     'django.contrib.admin',
+    'django.contrib.auth',
     ...
 ]
 ...
