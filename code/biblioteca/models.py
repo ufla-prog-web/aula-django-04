@@ -5,10 +5,10 @@ class Livro(models.Model):
     autor = models.CharField(max_length=255)
     ano = models.IntegerField()
 
-    def __str__(self):           # função adionada
-        return f"{self.nome} - {self.autor}" 
+    def __str__(self):
+        return f"{self.nome} - {self.autor} - {self.ano}"
 
-class TCC(models.Model):    # classe adiconada
+class TCC(models.Model):
     titulo = models.CharField(max_length=255)
     autor = models.CharField(max_length=255)
     orientador = models.CharField(max_length=255)

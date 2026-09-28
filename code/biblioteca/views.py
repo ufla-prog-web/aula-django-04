@@ -1,13 +1,13 @@
 from django.http import HttpResponse
 from django.template import loader
 from .models import Livro
-from .models import TCC 
+from .models import TCC
 
 def principal(request):
     template = loader.get_template('principal.html')
     return HttpResponse(template.render())
 
-def livros(request):         # atualize esta função
+def livros(request): 
     livros = Livro.objects.all().values()
     context = {
         'livros': livros
@@ -15,7 +15,7 @@ def livros(request):         # atualize esta função
     template = loader.get_template('livros.html')
     return HttpResponse(template.render(context, request))
 
-def tccs(request):         # atualize esta função
+def tccs(request):
     tccs = TCC.objects.all().values()
     context = {
         'tccs': tccs,
@@ -23,7 +23,7 @@ def tccs(request):         # atualize esta função
     template = loader.get_template('tccs.html')
     return HttpResponse(template.render(context, request))
 
-def tcc_detalhes(request, id):   # atualize esta função
+def tcc_detalhes(request, id):
     tcc = TCC.objects.get(id=id)
     context = {
         'tcc': tcc,
