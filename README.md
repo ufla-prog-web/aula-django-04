@@ -19,7 +19,7 @@
 * [Fundamentos Teóricos](#fundamentos-teóricos)
 * [Objetivo da Aula](#objetivo-da-aula)
 * [Desenvolvimento do Projeto](#desenvolvimento-do-projeto)
-* [Créditos e Referências](#créditos-e-referências)
+* [Referências e Materiais de Apoio](#referências-e-materiais-de-apoio)
 
 ## Introdução
 
@@ -27,7 +27,7 @@
 
 O objetivo deste tutorial é criar um sistema para gestão de biblioteca usando o framework Python Django. Esse projeto será utilizado na disciplina GAC116 - Programação Web da Universidade Federal de Lavras (UFLA). Esta aula é uma continuação da Aula Django 03.
 
-Este tutorial foi elaborado com base no tutorial disponível no [curso de Django da W3Schools](https://www.w3schools.com/django/index.php) e na [documentação oficial do Django](https://docs.djangoproject.com/pt-br/5.0/).
+Este tutorial foi elaborado com base no tutorial disponível no [curso de Django da W3Schools](https://www.w3schools.com/django/index.php) e na [documentação oficial do Django](https://docs.djangoproject.com/pt-br/6.1/).
 
 A aula está organizada no formato de tutorial, permitindo que cada estudante replique em seu computador os conceitos e recursos apresentados. O código será desenvolvido gradualmente, de modo a evidenciar a evolução da solução e facilitar a compreensão de como as tecnologias Django, HTML, CSS e JavaScript se integram na construção de aplicações web.
 
@@ -68,22 +68,33 @@ A seguir estão listados os principais recursos empregados no desenvolvimento de
   * [Link do site do chart.js](https://www.chartjs.org/)
 * FontAwesome - Biblioteca CSS para ícones
   * [Link do site do Fontawesome](https://fontawesome.com/)
-  * [Link da documentação Fontawesome](https://docs.fontawesome.com/web/setup/get-started) 
-  * [Link do curso da W3Schools](https://www.w3schools.com/icons/fontawesome5_intro.asp).
+  * [Link da documentação Fontawesome](https://docs.fontawesome.com/web/setup/get-started)
+  * [Link do curso da W3Schools](https://www.w3schools.com/icons/fontawesome5_intro.asp)
 * WhiteNoise - Biblioteca Python para servir arquivos estáticos
   * [Link do site do Whitenoise](https://whitenoise.readthedocs.io/)
+* Grappelli - Biblioteca Python para Interface Administrativa do Django
+  * [link do django-grappelli](https://django-grappelli.readthedocs.io/)
+* Jazzmin - Biblioteca Python para Interface Administrativa do Django
+  * [link do django-jazzmin](https://django-jazzmin.readthedocs.io/)
 * Unfold - Biblioteca Python para Interface Administrativa do Django
-    * [link do django-unfold](https://unfoldadmin.com/)
+  * [link do django-unfold](https://unfoldadmin.com/)
 
 ### Ferramentas
 
-* Visual Studio Code - Ambiente de desenvolvimento integrado - [link](https://code.visualstudio.com/)
-* Git - Sistema de controle de versão - [link](https://git-scm.com/)
-* Github - Plataforma de hospedagem e colaboração em projetos de software - [link](https://github.com/)
-* Pip - Gerenciador de pacotes do Python - [link](https://pypi.org/project/pip/)
-* Venv - Ambiente virtual do Python - [link](https://docs.python.org/pt-br/3/library/venv.html)
-* SQLite Online - SGBD - [link](https://sqliteonline.com/)
-* DB Browser for SQLite - SGBD - [link](https://sqlitebrowser.org/)
+* Visual Studio Code - Ambiente de Desenvolvimento Integrado
+  * [Link site Visual Studio](https://code.visualstudio.com/)
+* Git - Sistema de controle de versão
+  * [Link site do Git](https://git-scm.com/)
+* Github - Plataforma de hospedagem e colaboração em projetos de software
+  * [Link site do Github](https://github.com/)
+* Pip - Gerenciador de pacotes do Python
+  * [Link site do Pip](https://pypi.org/project/pip/)
+* Venv - Ambiente virtual do Python
+  * [Link site do Venv](https://docs.python.org/pt-br/3/library/venv.html)
+* SQLite Online - SGBD
+  * [Link site SQLite Online](https://sqliteonline.com/)
+* DB Browser for SQLite - SGBD
+  * [Link site SQLite Browser](https://sqlitebrowser.org/)
 
 ## Fundamentos Teóricos
 
@@ -103,7 +114,7 @@ A seguir estão destacados alguns dos principais fundamentos teóricos para ente
 
 **5. Segurança embutida:** O Django se preocupa com a segurança, oferecendo proteção contra ataques comuns como SQL *Injection*, *Cross-site Scripting* (XSS), *Cross-site Request Forgery* (CSRF), e *Clickjacking*.
 
-**6. Escalabilidade:** Django é altamente escalável, podendo lidar com grandes volumes de tráfego, como em sites populares que utilizam o framework (por exemplo, Instagram e Pinterest).
+**6. Escalabilidade:** Django é altamente escalável, podendo lidar com grandes volumes de tráfego, como em sites populares que utilizam o framework (por exemplo, Instagram, Pinterest, Spotify, Coursera e Dropbox).
 
 **7. Comunidade ativa e documentação:** Django conta com uma ampla comunidade de desenvolvedores e uma documentação completa e detalhada, facilitando a resolução de problemas e o aprendizado.
 
@@ -177,11 +188,7 @@ No modelo MVT do Django, as requisições seguem um fluxo bem definido, onde cad
 
 * **Resposta (HTTP Response)**: Depois que o Template é renderizado, a View retorna uma resposta HTTP (normalmente uma página HTML ou dados JSON em APIs) ao navegador ou cliente. Essa resposta contém o conteúdo processado e visualizado pelo usuário.
 
-A figura abaixo detalha o fluxo descrito acima.
-
-![Arquitetura MVT - Requisição](./docs/mvt-2.png)
-
-A figura abaixo detalha ainda mais a arquitetura MVT e as tecnologias envolvidas.
+A figura abaixo detalha o fluxo de comunicação, a arquitetura MVT e as tecnologias envolvidas.
 
 ![Arquitetura MVT - Detalhes](./docs/mvt-3.png)
 
@@ -256,18 +263,6 @@ Ative o ambiente virtual no seu computador utilizando o comando:
 source venv/bin/activate
 ```
 
-Para sair do ambiente virtual:
-
-```bash
-deactivate
-```
-
-### Fluxo de Trabalho no Django
-
-A seguir, descreve-se um fluxo de trabalho que pode ser adotado durante o desenvolvimento de projetos com o framework Django.
-
-[![](https://mermaid.ink/img/pako:eNqN1E1y2yAUB_CrMHThTVLvveiMbcnfX9Nm0UTKgkrPDikCFZBTNxPfJaseoNMT-GJ9Qq5DNSyqlfjzAwF6wzPNVA60R7dCPWUPTFtyE6WS4NNPUjqVxjLBTj9Pv8GQFWRgzOlVc2ZSek-urz-QAaohBppstHoEq4hUJHpkcqeQNDMNnBxeZL8sA2roVJR0U9q3FRP8B9KOAWu53Jn35aGT0jQ948jhuIUL3Is40-5Zxk6Oaum-3n3zN1CUglkwb3rk9Dik-_pbxffKkNjY06vlmfLGjd24SWs9ew5PreVMHJyGPtCpdHvxU6dnrWlZXnDZOpCZk_P_O725w4sax98hq2xtMyUEZBZ_OO7N1wunl__qgn2Fgu80YiWNz5eOr1rcUfDdyrl14jNdSQN6D7pzKYu1YxtkfYnbMsg-gqmEZbmrtRXbww7ftRvRjNk0Bec3Ir8R-42R3xj7jYnfmNaTN8HnZP1F8x2zp1-aq3tyPB7JbdJdlxmeBRN_f95t3XGHecaM63Bbb_qMPQhAseVC9N6NooEfx-F4FI7H4XgSjqft2O-8u3RGfhyF41k4nofjRThehuOVH9MrWoAuGM_xonquWUrtAxSQ0h6-5rBlWA9YWvIFKaus-nSQGe1ZXcEVrcocKy_iDCuwoL0tEwZTyLlVetlcfu4OfPkDBV6NXw?type=png)](https://mermaid.live/edit#pako:eNqN1E1y2yAUB_CrMHThTVLvveiMbcnfX9Nm0UTKgkrPDikCFZBTNxPfJaseoNMT-GJ9Qq5DNSyqlfjzAwF6wzPNVA60R7dCPWUPTFtyE6WS4NNPUjqVxjLBTj9Pv8GQFWRgzOlVc2ZSek-urz-QAaohBppstHoEq4hUJHpkcqeQNDMNnBxeZL8sA2roVJR0U9q3FRP8B9KOAWu53Jn35aGT0jQ948jhuIUL3Is40-5Zxk6Oaum-3n3zN1CUglkwb3rk9Dik-_pbxffKkNjY06vlmfLGjd24SWs9ew5PreVMHJyGPtCpdHvxU6dnrWlZXnDZOpCZk_P_O725w4sax98hq2xtMyUEZBZ_OO7N1wunl__qgn2Fgu80YiWNz5eOr1rcUfDdyrl14jNdSQN6D7pzKYu1YxtkfYnbMsg-gqmEZbmrtRXbww7ftRvRjNk0Bec3Ir8R-42R3xj7jYnfmNaTN8HnZP1F8x2zp1-aq3tyPB7JbdJdlxmeBRN_f95t3XGHecaM63Bbb_qMPQhAseVC9N6NooEfx-F4FI7H4XgSjqft2O-8u3RGfhyF41k4nofjRThehuOVH9MrWoAuGM_xonquWUrtAxSQ0h6-5rBlWA9YWvIFKaus-nSQGe1ZXcEVrcocKy_iDCuwoL0tEwZTyLlVetlcfu4OfPkDBV6NXw)
-
 ### Instalar o Django
 
 Instale o Django dentro do ambiente virtual criado (testado na versão 5.0):
@@ -292,14 +287,6 @@ python3 -m django --version
 
 ```bash
 export PATH=$PATH:~/.local/bin
-```
-
-### Instalar o WhiteNoise
-
-Instale o WhiteNoise dentro do ambiente virtual:
-
-```bash
-python3 -m pip install whitenoise
 ```
 
 ### Executar o Projeto
@@ -328,11 +315,9 @@ A aula anterior avançou até aqui.
 
 ### Adicionar Controle de Usuários
 
-Esta parte do tutorial foi baseada na [documentação oficial Django](https://docs.djangoproject.com/pt-br/5.0/topics/auth/default/) e também na [videoaula](https://www.youtube.com/watch?v=gdhiA6wObw0).
-
 O Django já oferece diversos recursos prontos para trabalhar com autenticação de usuários e controle de nível de acesso.
 
-Vamos adicionar ao nosso projeto um sistema de gestão de usuários, criando em seguida as telas de login e cadastro.
+Vamos adicionar ao nosso projeto um aplicativo de gestão de usuários, criando em seguida as telas de login e cadastro.
 
 Para isso, crie uma nova aplicação chamada `usuarios` com o comando:
 
@@ -360,13 +345,31 @@ INSTALLED_APPS = [
 Agora, iremos criar uma pasta chamada `templates` dentro da aplicação `usuarios`. Nesta pasta, crie um arquivo chamado `login.html` com o conteúdo:
 
 ```html
-<h1>Login</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Portal Biblioteca - Login</title>
+    </head>
+    <body>
+        <h1>Login</h1>
+    </body>
+</html>
 ```
 
 Ainda nesta pasta, crie um arquivo chamado `cadastro.html` com o conteúdo:
 
 ```html
-<h1>Cadastro</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Portal Biblioteca - Cadastro de Usuário</title>
+    </head>
+    <body>
+        <h1>Cadastro</h1>
+    </body>
+</html>
 ```
 
 Em seguida, precisamos definir as views do nosso sistema de login e cadastro. Assim, no arquivo `usuarios/views.py` digite o código abaixo:
@@ -544,14 +547,15 @@ def cadastro(request):
         # Verifica se o usuário já está cadastrado
         user = User.objects.filter(username=usuario).first()
         if user:
+            # Exibe uma mensagem de erro se o usuário já existir
             messages.error(request, 'Já existe um usuário com esse nome. Tente novamente.')
             return render(request, 'cadastro.html')
-
-        # Cria e salva o usuário
-        user = User.objects.create_user(username=usuario, email=email, password=senha)
-        user.save()
-        
-        return render(request, 'login.html')
+        else:
+            # Cria e salva o usuário
+            user = User.objects.create_user(username=usuario, email=email, password=senha)
+            user.save()
+            messages.success(request, 'Usuário cadastrado com sucesso!')
+            return render(request, 'cadastro.html')
 ```
 
 **Exibindo mensagens de feedback**
@@ -580,7 +584,7 @@ Acesse a URL: [http://127.0.0.1:8000/auth/cadastro](http://127.0.0.1:8000/auth/c
 
 **Observação:** o Django não armazena senhas brutas (texto não criptografado) no modelo de usuário. Ele armazena apenas um hash da senha.
 
-Para mais detalhes sobre a classe `User`, consulte a [documentação oficial](https://docs.djangoproject.com/pt-br/5.0/topics/auth/default/).
+Para mais detalhes sobre a classe `User`, consulte a [documentação oficial](https://docs.djangoproject.com/pt-br/6.1/topics/auth/default/).
 
 ### Melhorar a Tela de Login
 
@@ -679,6 +683,8 @@ Acesse o endereço: [http://127.0.0.1:8000/auth/login](http://127.0.0.1:8000/aut
     * O Django fornece uma função chamada "login" que permite que você associe um objeto de usuário autenticado a uma sessão. Isso é importante para manter o estado de autenticação do usuário durante a sessão.
     * A função "login" normalmente é usada após o usuário ser autenticado com sucesso usando o "authenticate".
 
+**Atenção:** repare que o Django possui uma função chamada `login` e que é o mesmo nome da função `login` que criamos na `view`. Dessa forma, para não conflitar realizamos o import com o nome `login_django`.
+
 ### Exibir Informações do Usuário na Navbar
 
 Nesta etapa, iremos adicionar informações sobre o usuário logado diretamente na navbar do sistema.
@@ -687,9 +693,6 @@ Edite o arquivo `biblioteca/templates/base.html` e insira o seguinte trecho de c
 
 ```html
 ...
-    <div>
-        ...
-        <li class="nav-item">
             <a class="nav-link active" href="/admin"><i class="fa-solid fa-lock"></i> Admin</a>
         </li>
     </ul>
@@ -710,7 +713,7 @@ Edite o arquivo `biblioteca/templates/base.html` e insira o seguinte trecho de c
 
 **Configurando a imagem de avatar**
 
-Copie o arquivo `img_avatar.png` da pasta `docs` para a pasta `staticfiles`.
+Copie o arquivo `img_avatar.png` da pasta `recursos` para a pasta `static`.
 
 Em seguida, execute o comando para atualizar os arquivos estáticos:
 
@@ -738,6 +741,8 @@ def principal(request):
 ...
 ```
 
+**Explicação:** Antes o código estava assim `HttpResponse(template.render())` e agora você passa como parâmetro um contexto vazio `{}` e também `request`. Ao fornecer ao template do Django o `request` associado à requisição informações como: `{{ user }}`, `{{ user.username }}` e `{{ user.is_authenticated }}` estão disponíveis para serem utilizadas.
+
 Execute novamente o projeto e analise o resultado. Agora, a página principal refletirá corretamente as informações do usuário autenticado.
 
 ### Adicionar Logout no Sistema
@@ -755,7 +760,7 @@ def logout(request):
     return render(request, 'login.html')
 ```
 
-**Explicação:** ao chamar `logout()` do django (ou `logout_django()` neste caso), os dados da sessão atual são completamente limpos. Todos os dados existentes são removidos. Isso evita que outra pessoa use o mesmo navegador para fazer login e ter acesso aos dados da sessão do usuário anterior.
+**Explicação:** ao chamar `logout()` do django ou `logout_django()` neste caso, os dados da sessão atual são completamente limpos. Todos os dados existentes são removidos. Isso evita que outra pessoa use o mesmo navegador para fazer login e ter acesso aos dados da sessão do usuário anterior.
 
 **Definindo a rota de logout**
 
@@ -790,7 +795,7 @@ def dashboard(request):
     return HttpResponse("Você precisa estar logado!")
 ```
 
-Agora, abra uma guia anônima do navegador e acesse [http://127.0.0.1:8000](http://127.0.0.1:8000). Tente acessar a tela de dashboard sem login, então você verá a mensagem de bloqueio. Faça login e tente novamente, então o dashboard será exibido corretamente.
+Agora, acesse [http://127.0.0.1:8000](http://127.0.0.1:8000). Tente acessar a tela de dashboard sem login, então você verá a mensagem de bloqueio. Faça login e tente novamente, então o dashboard será exibido corretamente.
 
 **Usando o decorador login_required**
 
@@ -811,7 +816,7 @@ def dashboard(request):
     return HttpResponse(template.render(context, request))
 ```
 
-Em seguida, abra uma guia anônima do navegador e acesse o endereço [http://127.0.0.1:8000](http://127.0.0.1:8000). Tente acessar a tela de dashboard. Perceba que portal redireciona para a tela de login, isso ocorre, pois colocamos isso no parâmetro `login_url`. Na sequência, faça login na plataforma e então tente acessar o dashboard.
+Em seguida, acesse o endereço [http://127.0.0.1:8000](http://127.0.0.1:8000). Tente acessar a tela de dashboard sem login. Perceba que portal redireciona para a tela de login, isso ocorre, pois colocamos isso no parâmetro `login_url`. Na sequência, faça login na plataforma e então tente acessar o dashboard.
 
 Esse ajuste garante que apenas usuários autenticados tenham acesso ao dashboard, aumentando a segurança do sistema.
 
@@ -896,11 +901,11 @@ python manage.py test
 
 **Dica:** habilite os prints comentados no método `test_view_tcc_detalhes` para inspecionar a saída gerada.
 
-### Opção1: Mudar o Tema do Ambiente Administrativo para Grappelli
+### Mudar o Tema do Ambiente Administrativo para Grappelli - Opção1
 
 A seguir será mostrado três opções de temas (Grappelli, Jazzmin e Unfold) para você configurar o ambiente administrativo. Escolha apenas uma opção para fazer.
 
-Nesta etapa, vamos alterar o tema padrão do ambiente administrativo do Django para o Grappelli, que oferece uma interface bem polida, visual clássico, mais "clean" porém com estilo tradicional. Oferece diversas customizações no tema, dashboard, ordenação inline, autocomplete.
+Nesta etapa, vamos alterar o tema padrão do ambiente administrativo do Django para o Grappelli, que oferece uma interface bem polida, visual clássico, mais *clean* porém com estilo tradicional. Oferece diversas customizações no tema, dashboard, ordenação inline, autocomplete.
 
 Para isso, instale o Grappelli do Django utilizando o comando abaixo:
 
@@ -947,7 +952,7 @@ python3 manage.py runserver
 
 Para mais informações sobre o Grappelli, consulte a [documentação oficial](https://django-grappelli.readthedocs.io/).
 
-### Opção2: Mudar o Tema do Ambiente Administrativo para Jazzmin
+### Mudar o Tema do Ambiente Administrativo para Jazzmin - Opção2
 
 Nesta etapa, vamos alterar o tema padrão do ambiente administrativo do Django para o Jazzmin, que oferece uma interface mais moderna, robusta e visualmente atraente.
 
@@ -1001,7 +1006,7 @@ python3 manage.py runserver
 
 Para mais informações sobre o Jazzmin, consulte a [documentação oficial](https://django-jazzmin.readthedocs.io/).
 
-### Opção3: Mudar o Tema do Ambiente Administrativo para Unfold
+### Mudar o Tema do Ambiente Administrativo para Unfold - Opção3
 
 Nesta etapa, vamos alterar o tema padrão do ambiente administrativo do Django para o Unfold, que oferece uma interface mais moderna, robusta e visualmente atraente.
 
@@ -1131,13 +1136,142 @@ O atributo `TIME_ZONE` especifica em qual fuso horário o Django deve armazenar 
 
 Reinicie o servidor, faça uma atualização em qualquer registro pelo ambiente administrativo e observe como as mudanças aparecem corretamente na seção Ações recentes.
 
-Para mais informações sobre as configurações disponíveis no arquivo de `settings.py`, consulte a [documentação oficial do Django](https://docs.djangoproject.com/en/5.1/ref/settings/).
+Para mais informações sobre as configurações disponíveis no arquivo de `settings.py`, consulte a [documentação oficial do Django](https://docs.djangoproject.com/en/6.1/ref/settings/).
 
-## Créditos e Referências
+### Personalizar o Modelo de Página 404
+
+Quando o usuário tenta acessar uma página que não existe, o Django retorna automaticamente um erro 404 (*Not Found*). Por padrão, esse erro é exibido por meio de uma visualização interna do framework, mas podemos personalizar essa página para oferecer uma melhor experiência ao usuário.
+
+Para verificar como o Django trata o erro, acesse uma URL inexistente no navegador, por exemplo:
+
+Acesse a URL [http://127.0.0.1:8000/blabla](http://127.0.0.1:8000/blabla).
+
+Será obtido o seguinte resultado:
+
+![Erro 404-1](./docs/erro404-1.png)
+
+Isso ocorreu, pois a variável `DEBUG` está definida como `True` nas suas configurações no arquivo `portal_biblioteca/settings.py`.
+
+No entanto, a forma esperada de saída de erro, quando o sistema estiver em produção, é a exibida abaixo:
+
+![Erro 404-2](./docs/erro404-2.png)
+
+Para obter uma saída semelhante a segunda forma (correta), você deve definir a variável `DEBUG` como `False`. Assim, você será direcionado para o modelo Django 404 integrado. Isso é feito no arquivo `portal_biblioteca/settings.py`, onde você também deve especificar o nome do host (`ALLOWED_HOSTS`) de onde seu projeto é executado:
+
+```python
+...
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+ALLOWED_HOSTS = ['*']
+...
+```
+
+**Importante**: Quando `DEBUG = False`, o Django exige que você especifique os hosts nos quais permitirá que este projeto Django seja executado.
+
+Quando o sistema estiver em produção, isso deve ser substituído por um nome de domínio adequado, semelhante abaixo:
+
+```python
+ALLOWED_HOSTS = ['seu-dominio.com']
+```
+
+Mas, como ainda estamos em desenvolvimento, então podemos colocar qualquer domínio como abaixo:
+
+```python
+ALLOWED_HOSTS = ['*']
+```
+
+Escolhemos `*`, o que significa que qualquer endereço tem permissão para hospedar este site. Isso deve ser alterado para um nome de domínio real quando você implantar seu projeto em um servidor público.
+
+O Django procurará um arquivo chamado `404.html` na pasta `biblioteca/templates` e o exibirá quando houver um erro 404. Se esse arquivo não existir, o Django mostrará o "*Not Found*" que você viu no exemplo acima.
+
+Para personalizar esta mensagem, crie o arquivo `biblioteca/templates/404.html` com o seguinte conteúdo:
+
+```html
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    Portal Biblioteca - Erro 404
+{% endblock %}
+
+{% block conteudo %}
+    <main class="container mt-5">
+        <h1>Portal Biblioteca</h1>
+        <h4>Página não encontrada</h4>
+        <p>Não existe uma página para a URL solicitada.</p>
+    </main>
+{% endblock %}
+```
+
+Reinicie o servidor:
+
+```bash
+python3 manage.py runserver
+```
+
+Acesse a URL inexistente: [http://127.0.0.1:8000/blabla](http://127.0.0.1:8000/blabla) e você obterá o modelo 404 personalizado como abaixo:
+
+![Erro 404-4](./docs/erro404-4.png)
+
+**Atenção:** Se isso não ocorreu, acesse uma navegação anônima para ver que ficará sem a estilização.
+
+No entanto, esse modelo deveria aparecer como abaixo. Precisaremos incluir uma biblioteca externa para que o Django consiga servir arquivos estáticos.
+
+![Erro 404-3](./docs/erro404-3.png)
+
+### Biblioteca para Servir Arquivos Estáticos
+
+Devido a modificação anterior `DEBUG = False`, o Django passou a não mais servir arquivos estáticos, pelo menos não em produção. Para resolver isso, teremos que usar uma biblioteca de terceiros. Existem muitas alternativas, mostraremos como usar uma biblioteca Python chamada `WhiteNoise`.
+
+Para instalar o WhiteNoise em seu ambiente virtual, digite o comando:
+
+```bash
+python3 -m pip install whitenoise
+```
+
+Para que o Django saiba que você deseja executar o WhitNoise, você precisa especificá-lo na lista `MIDDLEWARE` do arquivo `portal_biblioteca/settings.py`:
+
+```python
+...
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',               # linha adicionada
+]
+...
+```
+
+Há mais uma ação que você precisa executar antes de poder servir o arquivo estático. Você precisa coletar todos os arquivos estáticos utilizando o comando:
+
+```bash
+python3 manage.py collectstatic
+```
+
+Reinicie o servidor:
+
+```bash
+python3 manage.py runserver
+```
+
+Em modo de produção, o WhiteNoise será responsável por servir os arquivos estáticos automaticamente. Acesse um arquivo estático (por exemplo, [http://127.0.0.1:8000/static/styles.css](http://127.0.0.1:8000/static/styles.css)) para confirmar que o WhiteNoise está servindo o conteúdo corretamente.
+
+Acesse uma URL inexistente: [http://127.0.0.1:8000/blabla](http://127.0.0.1:8000/blabla) e você obterá o modelo 404 personalizado como abaixo.
+
+![Erro 404-3](./docs/erro404-3.png)
+
+## Referências e Materiais de Apoio
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-Este tutorial foi inspirado nos seguintes materiais:
+Este tutorial foi baseado nos seguintes materiais:
 
-* [Documentação oficial do Django](https://docs.djangoproject.com/pt-br/5.0/)
+* [Documentação oficial do Django](https://docs.djangoproject.com/pt-br/6.1/)
 * [Curso de Django da W3Schools](https://www.w3schools.com/django/index.php)
+* [Autenticação com Django | Django Auth](https://www.youtube.com/watch?v=gdhiA6wObw0)
