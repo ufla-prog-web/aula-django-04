@@ -287,7 +287,7 @@ urlpatterns = [
 ]
 ```
 
-Agora, precisamos informar a nossa aplicação principal da existência dessas novas URLs. Assim, edite o código `urls.py` da pasta `porta_biblioteca` da seguinte forma:
+Agora, precisamos informar a nossa aplicação principal da existência dessas novas URLs. Assim, edite o código `urls.py` da pasta `portal_biblioteca` da seguinte forma:
 
 ```python
 from django.contrib import admin
@@ -420,7 +420,7 @@ Até este ponto, ainda não salvamos os dados no banco de dados; apenas mostramo
 
 Nesta etapa, iremos inserir as informações cadastradas no BD.
 
-Atualize o código do método `cadastro` no arquivo `usuarios/view.py`.
+Atualize o código do método `cadastro` no arquivo `usuarios/views.py`.
 
 ```python
 # faça essas inclusões
